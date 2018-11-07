@@ -36,11 +36,11 @@ Requires all host environment variables to be set.
     $ make docker_test
 
 ### Host environment variables for docker-compose
-`.env` files will be automatically created (with `env_writer.py` based on `env.json`) by `make docker_test`, based on host environment variables with `INVEST_UI` prefix.
+`.env` files will be automatically created (with `env_writer.py` working of the `env.json` file) by `make docker_test`, based on host environment variables with `INVEST_UI` prefix.
 
 ## Directory Forms
 
-Form submissions are powered by [directory-forms-api](https://github.com/uktrade/directory-forms-api). Set that up locally then generate a API client [here](http://forms.trade.great:8011/admin/client/client/) and add the following entries to your `conf/.env` file.
+Form submissions are powered by [directory-forms-api](https://github.com/uktrade/directory-forms-api). Set the api up locally then generate an API client [here](http://forms.trade.great:8011/admin/client/client/) and add the following entries to your `conf/.env` file.
 
 | Environment variable                                  | Notes                             |
 | ----------------------------------------------------- | --------------------------------- |
@@ -80,7 +80,7 @@ Form submissions are powered by [directory-forms-api](https://github.com/uktrade
 
 ## Session
 
-Signed cookies are used as the session backend to avoid using a database. We therefore must avoid storing non-trivial data in the session, because the browser will be exposed to the data.
+Signed cookies are used as the session backend to avoid database usage. Therefore storing non-trivial data must be avoided in the session, or else the browser will be exposed to the data.
 
 
 [circle-ci-image]: https://circleci.com/gh/uktrade/invest-ui/tree/master.svg?style=svg
